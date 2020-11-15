@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Review_Details"></activity>
+        <activity android:name=".Approve_Request" />
+        <activity android:name=".Evaluate" />
+        <activity android:name=".Schedule_Review" />
         <activity
             android:name=".Home_Page"
             android:label="@string/title_activity_home__page"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Group_Select" />
         <activity android:name=".MainActivity">
             <intent-filter>

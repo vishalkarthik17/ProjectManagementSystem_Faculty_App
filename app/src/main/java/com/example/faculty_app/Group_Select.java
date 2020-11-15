@@ -96,7 +96,7 @@ public class Group_Select extends AppCompatActivity {
         });
 
         proceed.setOnClickListener(new View.OnClickListener() {
-            String facid="";
+            String facid="Poda";
             String grid="";
             String grpp="";
             @Override
@@ -109,8 +109,19 @@ public class Group_Select extends AppCompatActivity {
 
 
                     gg.child(mAuth.getUid()).child("group_id").setValue(sal.get(0));
+                    gg.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            facid=String.valueOf(dataSnapshot.child(mAuth.getUid()).child("faculty_id").getValue().toString());
+                            abc.child(sal.get(0)).child("facultyid").setValue(facid);
+                        }
 
-                    abc.child(sal.get(0)).child("facultyid").setValue(mAuth.getUid());
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(Group_Select.this, "Nahi Beta", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    abc.child(sal.get(0)).child("facultyid").setValue(facid);
 
 
                     Intent homego=new Intent(Group_Select.this,Home_Page.class);

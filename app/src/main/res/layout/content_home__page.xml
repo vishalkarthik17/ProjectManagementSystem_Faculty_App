@@ -1,24 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Home_Page"
-    tools:showIn="navigation_view">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
 
     <TextView
-        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/title_activity_home__page"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Faculty Details"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="60dp"
+        android:textSize="20sp"
+        android:id="@+id/home_header"
+        android:textStyle="bold"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/home_name"
+        android:layout_below="@id/home_header"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"
+
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:id="@+id/home_name_label"
+        android:layout_below="@id/home_header"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/home_name"
+
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/home_studentid"
+        android:layout_below="@id/home_name"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"
+
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faculty ID:"
+        android:id="@+id/home_studentid_label"
+        android:layout_below="@id/home_name_label"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/home_studentid"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dept:"
+        android:id="@+id/home_dept_label"
+        android:layout_below="@id/home_studentid_label"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/home_dept"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/home_dept"
+        android:layout_below="@id/home_studentid"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"
+
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_dept"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Group Detials"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/group_details_header"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_details_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/home_title"
+        android:text="NA"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/home_title"
+        android:layout_below="@+id/group_details_header"
+        android:layout_marginTop="10dp"
+        android:text="Project Title :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:id="@+id/home_title_label"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/home_mainarea"
+        android:text="NA"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/home_mainarea"
+        android:layout_below="@+id/home_title_label"
+        android:layout_marginTop="10dp"
+        android:text="Main Area :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:id="@+id/home_mainarea_label"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_mainarea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/home_subarea"
+        android:text="NA"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/home_subarea"
+        android:layout_below="@+id/home_mainarea_label"
+        android:layout_marginTop="10dp"
+        android:text="Sub Area :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:id="@+id/home_subarea_label"/>
+
+
+</RelativeLayout>

@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 mAuth.signInWithEmailAndPassword(uids,pws).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
 
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
 
 
                         if(task.isSuccessful()&& uids!="" && pws!="" ){
