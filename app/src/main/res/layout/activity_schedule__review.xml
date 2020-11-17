@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,16 +9,74 @@
         android:id="@+id/bckBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bckBtn"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Enter Next Review Details"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/nextReviewBanner"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nextReviewBanner"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="MM-DD-YYYY"
+        android:id="@+id/mmddyyyy"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginLeft="200sp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mmddyyyy"
+        android:layout_marginTop="10dp"
+        android:hint="Select Date"
+        android:id="@+id/EnterDate"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/EnterDate"
+        android:layout_marginTop="20dp"
+        android:text="Select Review No."
+        android:textSize="20sp"
+        android:id="@+id/label_rno"
+
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rNumber"
+        android:layout_below="@+id/label_rno"
+        android:layout_marginTop="10dp"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule"
+        android:layout_below="@+id/rNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:id="@+id/skeduleBtn"
+        />
+
+
+
+</RelativeLayout>

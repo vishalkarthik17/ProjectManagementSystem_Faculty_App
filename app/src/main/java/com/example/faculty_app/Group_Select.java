@@ -83,7 +83,7 @@ public class Group_Select extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 if (sal.size() == 0) {
-                    sal.add(keylist.get(position));
+                    sal.add(keylist.get(position+sal.size()));
                     one.setText(al.get(position));
                     al.remove(position);
                     adp.notifyDataSetChanged();
