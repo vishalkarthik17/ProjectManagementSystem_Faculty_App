@@ -54,7 +54,7 @@ public class Schedule_Review extends AppCompatActivity implements AdapterView.On
         sp.setAdapter(adpp);
         sp.setOnItemSelectedListener(this);
 
-        ed=findViewById(R.id.EnterDate);
+        //ed=findViewById(R.id.EnterDate);
         tv=findViewById(R.id.mmddyyyy);
         bb=findViewById(R.id.bckBtn);
         sb=findViewById(R.id.skeduleBtn);
@@ -71,16 +71,21 @@ public class Schedule_Review extends AppCompatActivity implements AdapterView.On
         final int month=calendar.get(Calendar.MONTH);
         final int day=calendar.get(Calendar.DAY_OF_MONTH);
 
-        ed.setOnClickListener(new View.OnClickListener() {
+        tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(
-                        Schedule_Review.this,android.R.style.Theme_Holo_Light_Dialog_MinWidth,setListener,year,month,day
-                );
-                datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                datePickerDialog.show();
+                Calendar calendar = Calendar.getInstance();
+                int year=calendar.get(Calendar.YEAR);
+                int month=calendar.get(Calendar.MONTH);
+                int day=calendar.get(Calendar.DAY_OF_MONTH);
+                DatePickerDialog dialog=new DatePickerDialog(Schedule_Review.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,setListener,year,month,day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
             }
         });
+
         setListener=new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
