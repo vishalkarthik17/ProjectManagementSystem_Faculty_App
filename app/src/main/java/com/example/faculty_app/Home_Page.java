@@ -155,7 +155,7 @@ public class Home_Page extends AppCompatActivity
 
         }
         else if(id==R.id.nav_reviewdet){
-            Intent Sched = new Intent(Home_Page.this,Approve_Request.class);
+            Intent Sched = new Intent(Home_Page.this,Review_Details.class);
             startActivity(Sched);
             finish();
 

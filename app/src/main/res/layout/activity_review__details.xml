@@ -1,24 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Review_Details">
+
     <Button
         android:id="@+id/bckBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
+       android:text="Back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review 1"
+        android:layout_below="@+id/bckBtn"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/review1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/review1"
+        android:layout_marginTop="10dp"
+        android:text="Marks : "
+        android:id="@+id/mark_label1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/review1"
+        android:layout_marginTop="10dp"
+        android:text="NA"
+        android:layout_toRightOf="@id/mark_label1"
+        android:id="@+id/reviewMark1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/mark_label1"
+        android:layout_marginTop="10dp"
+        android:text="Date : "
+        android:id="@+id/date_label1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/mark_label1"
+        android:layout_marginTop="10dp"
+        android:text="NA"
+        android:layout_toRightOf="@id/mark_label1"
+        android:id="@+id/reviewDate1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/date_label1"
+        android:layout_marginTop="10dp"
+        android:text="Remarks : "
+        android:id="@+id/remarks_label1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/date_label1"
+        android:layout_marginTop="10dp"
+        android:text="NA"
+        android:layout_toRightOf="@id/mark_label1"
+        android:id="@+id/reviewRemarks1"
+        android:layout_marginRight="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review 2"
+        android:layout_below="@+id/reviewRemarks1"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/review2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/review2"
+        android:layout_marginTop="10dp"
+        android:text="Marks : "
+        android:id="@+id/mark_label2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/review2"
+        android:layout_marginTop="10dp"
+        android:text="NA"
+        android:layout_toRightOf="@id/mark_label2"
+        android:id="@+id/reviewMark2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/mark_label2"
+        android:layout_marginTop="10dp"
+        android:text="Date : "
+        android:id="@+id/date_label2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/mark_label2"
+        android:layout_marginTop="10dp"
+        android:text="NA"
+        android:layout_toRightOf="@id/mark_label2"
+        android:id="@+id/reviewDate2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/date_label2"
+        android:layout_marginTop="10dp"
+        android:text="Remarks : "
+        android:id="@+id/remarks_label2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/reviewDate2"
+        android:layout_marginTop="10dp"
+        android:text="NA"
+        android:layout_toRightOf="@id/mark_label2"
+        android:id="@+id/reviewRemarks2"
+        android:layout_marginRight="20dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review 3"
+        android:layout_below="@+id/reviewRemarks2"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/review3"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/review3"
+        android:layout_marginTop="10dp"
+        android:text="Marks : "
+        android:id="@+id/mark_label3"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/review3"
+        android:layout_marginTop="10dp"
+        android:text="NA"
+        android:layout_toRightOf="@id/mark_label3"
+        android:id="@+id/reviewMark3"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/mark_label3"
+        android:layout_marginTop="10dp"
+        android:text="Date : "
+        android:id="@+id/date_label3"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/mark_label3"
+        android:layout_marginTop="10dp"
+        android:text="NA"
+        android:layout_toRightOf="@id/mark_label3"
+        android:id="@+id/reviewDate3"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/date_label3"
+        android:layout_marginTop="10dp"
+        android:text="Remarks : "
+        android:id="@+id/remarks_label3"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/reviewDate3"
+        android:layout_marginTop="10dp"
+        android:text="NA"
+        android:layout_toRightOf="@id/mark_label3"
+        android:id="@+id/reviewRemarks3"
+        android:layout_marginRight="20dp"
+        />
+
+</RelativeLayout>

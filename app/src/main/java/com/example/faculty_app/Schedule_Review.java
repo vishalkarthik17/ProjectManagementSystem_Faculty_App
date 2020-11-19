@@ -66,10 +66,7 @@ public class Schedule_Review extends AppCompatActivity implements AdapterView.On
             }
         });
 
-        Calendar calendar = Calendar.getInstance();
-        final int year=calendar.get(Calendar.YEAR);
-        final int month=calendar.get(Calendar.MONTH);
-        final int day=calendar.get(Calendar.DAY_OF_MONTH);
+
 
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,9 +74,9 @@ public class Schedule_Review extends AppCompatActivity implements AdapterView.On
                 Calendar calendar = Calendar.getInstance();
                 int year=calendar.get(Calendar.YEAR);
                 int month=calendar.get(Calendar.MONTH);
-                int day=calendar.get(Calendar.DAY_OF_MONTH);
+                int dayy=calendar.get(Calendar.DAY_OF_MONTH);
                 DatePickerDialog dialog=new DatePickerDialog(Schedule_Review.this,
-                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,setListener,year,month,day);
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,setListener,year,month,dayy);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
 
@@ -90,7 +87,7 @@ public class Schedule_Review extends AppCompatActivity implements AdapterView.On
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 month=month+1;
-                datee=day+"/"+month+"/"+year;
+                datee=dayOfMonth+"/"+month+"/"+year;
                 tv.setText(datee);
             }
         };
