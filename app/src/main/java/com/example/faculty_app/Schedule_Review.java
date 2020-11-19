@@ -30,7 +30,7 @@ import java.util.Calendar;
 
 public class Schedule_Review extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private Button bb,sb;
-    private EditText ed;
+    private EditText ed,ins;
     private TextView tv;
     private Spinner sp;
     String choice="";
@@ -54,7 +54,7 @@ public class Schedule_Review extends AppCompatActivity implements AdapterView.On
         sp.setAdapter(adpp);
         sp.setOnItemSelectedListener(this);
 
-        //ed=findViewById(R.id.EnterDate);
+        ins=findViewById(R.id.enterInst);
         tv=findViewById(R.id.mmddyyyy);
         bb=findViewById(R.id.bckBtn);
         sb=findViewById(R.id.skeduleBtn);
@@ -108,6 +108,7 @@ public class Schedule_Review extends AppCompatActivity implements AdapterView.On
                         ReviewTableKey=String.valueOf(grpID+choice);
                         Log.e("Key",ReviewTableKey);
                         abc.child("Review").child(ReviewTableKey).child("reviewDate").setValue(datee);
+                        abc.child("Review").child(ReviewTableKey).child("instructions").setValue(ins.getText().toString());
                         Intent toHome=new Intent(Schedule_Review.this,Home_Page.class);
                         startActivity(toHome);
                     }
