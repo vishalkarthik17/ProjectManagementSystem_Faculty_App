@@ -24,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
     private Button Login_Button;
-    private Button br;
+
     private FirebaseAuth mAuth;
     private ProgressBar loading;
     private EditText userid,pword;
