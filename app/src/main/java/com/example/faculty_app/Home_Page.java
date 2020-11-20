@@ -154,12 +154,31 @@ public class Home_Page extends AppCompatActivity
             finish();
 
         }
+        else if (id == R.id.nav_tools_2) {
+            Intent Sched = new Intent(Home_Page.this,Approve_Request_Bud.class);
+            startActivity(Sched);
+            finish();
+
+        }
         else if(id==R.id.nav_reviewdet){
             Intent Sched = new Intent(Home_Page.this,Review_Details.class);
             startActivity(Sched);
             finish();
 
         }
+        else if(id==R.id.nav_resDetails){
+            Intent Sched = new Intent(Home_Page.this,View_Approved.class);
+            startActivity(Sched);
+            finish();
+
+        }
+        else if(id==R.id.nav_budDetails){
+            Intent Sched = new Intent(Home_Page.this,View_Approved_2.class);
+            startActivity(Sched);
+            finish();
+
+        }
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Review_Details"></activity>
+        <activity android:name=".Approve_Request_Bud"></activity>
+        <activity android:name=".View_Approved_2" />
+        <activity android:name=".View_Approved" />
+        <activity android:name=".Review_Details" />
         <activity android:name=".Approve_Request" />
         <activity android:name=".Evaluate" />
         <activity android:name=".Schedule_Review" />
