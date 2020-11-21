@@ -42,6 +42,24 @@
 
     </group>
 
+    <item android:title="Review Panel">
+        <menu>
+            <item
+                android:id="@+id/nav_selPanel"
+                android:icon="@drawable/ic_group_black_24dp"
+                android:title="Select Panel" />
+            <item
+                android:id="@+id/nav_selGroup"
+                android:icon="@drawable/ic_group_black_24dp"
+                android:title="Select Groups" />
+            <item
+                android:id="@+id/nav_FinalEval"
+                android:icon="@drawable/ic_school_black_24dp"
+                android:title="Final Review Evaluation" />
 
+
+        </menu>
+
+    </item>
 
 </menu>

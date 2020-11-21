@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Select_Panel">
+
+    <TextView
+        android:id="@+id/spinner1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/selectTeam"
+        />
+
+    <TextView
+        android:id="@+id/spinner2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/spinner1"
+        />
+
+
+
+    <TextView
+        android:id="@+id/selectTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Panel Members "
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        />
+    <TextView
+        android:id="@+id/warnin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do This  only if you Panel Head** "
+        android:textSize="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/selectTeam"
+        />
+
+    <Button
+        android:id="@+id/toHomeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="proceed"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/toHomeBtn"
+        android:text="Re-Select"
+        android:layout_below="@+id/spinner2"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/rreselectt"
+
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toHomeBtn"
+        android:id="@+id/FacultyList"
+        >
+
+
+    </ListView>
+
+
+</RelativeLayout>

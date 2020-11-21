@@ -31,6 +31,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -40,8 +41,8 @@ public class Home_Page extends AppCompatActivity
     private TextView facid;
     private TextView dd;
     private TextView gtitle,gmainarea,gsubarea;
-
-
+    private DatabaseReference vk;
+    private FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,7 @@ public class Home_Page extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
+        fAuth = FirebaseAuth.getInstance();
         namee=(TextView)findViewById(R.id.home_name);
         facid=(TextView)findViewById(R.id.home_studentid);
         dd=(TextView)findViewById(R.id.home_dept);
@@ -66,7 +67,7 @@ public class Home_Page extends AppCompatActivity
         gtitle=(TextView)findViewById(R.id.home_title);
         gmainarea=(TextView)findViewById(R.id.home_mainarea);
         gsubarea=(TextView)findViewById(R.id.home_subarea);
-
+        vk = FirebaseDatabase.getInstance().getReference();
 
         final DatabaseReference rrr=FirebaseDatabase.getInstance().getReference();
         Log.e("Vishal",mAuth.getUid());
@@ -176,6 +177,43 @@ public class Home_Page extends AppCompatActivity
             Intent Sched = new Intent(Home_Page.this,View_Approved_2.class);
             startActivity(Sched);
             finish();
+
+        }
+        else if(id==R.id.nav_selPanel){
+            Intent Sched = new Intent(Home_Page.this,Select_Panel.class);
+            startActivity(Sched);
+            finish();
+
+        }
+        else if(id==R.id.nav_selGroup){
+            vk.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(!(snapshot.child("Faculty").child(fAuth.getUid()).child("panel_id").getValue().toString()).equals("NA") ){
+
+                        String pp=snapshot.child("Faculty").child(fAuth.getUid()).child("panel_id").getValue().toString();
+                        if((fAuth.getUid()).equals(snapshot.child("Panel").child(pp).child("panel_head").getValue().toString()) ){
+                            Intent Sched = new Intent(Home_Page.this,Select_Groups_Panel.class);
+                            startActivity(Sched);
+                            finish();
+
+                        }
+                        else{
+                            Toast.makeText(Home_Page.this, "You are not Panel Head", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                    else
+                    {
+                        Toast.makeText(Home_Page.this, "You are notpart of panel", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
 
         }
 
