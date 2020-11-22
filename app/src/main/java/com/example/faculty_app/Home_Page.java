@@ -140,43 +140,154 @@ public class Home_Page extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            Intent Sched = new Intent(Home_Page.this,Schedule_Review.class);
-            startActivity(Sched);
-            finish();
+            vk.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(!(snapshot.child("Faculty").child(fAuth.getUid()).child("group_id").getValue().toString()).equals("NA") ){
+                        Intent Sched = new Intent(Home_Page.this,Schedule_Review.class);
+                        startActivity(Sched);
+                        finish();
+                    }
+                    else
+                        Toast.makeText(Home_Page.this, "You are not allowed !", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
 
         } else if (id == R.id.nav_slideshow) {
-            Intent Sched = new Intent(Home_Page.this,Evaluate.class);
-            startActivity(Sched);
-            finish();
+            vk.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(!(snapshot.child("Faculty").child(fAuth.getUid()).child("group_id").getValue().toString()).equals("NA") )
+                    {
+                        Intent Sched = new Intent(Home_Page.this,Evaluate.class);
+                        startActivity(Sched);
+                        finish();
+
+                    }
+                    else
+                        Toast.makeText(Home_Page.this, "You are not allowed !", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
 
         } else if (id == R.id.nav_tools) {
-            Intent Sched = new Intent(Home_Page.this,Approve_Request.class);
-            startActivity(Sched);
-            finish();
+            vk.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(!(snapshot.child("Faculty").child(fAuth.getUid()).child("group_id").getValue().toString()).equals("NA") )
+                    {
+                        Intent Sched = new Intent(Home_Page.this,Approve_Request.class);
+                        startActivity(Sched);
+                        finish();
+                    }
+                    else
+                        Toast.makeText(Home_Page.this, "You are not allowed !", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
 
         }
         else if (id == R.id.nav_tools_2) {
-            Intent Sched = new Intent(Home_Page.this,Approve_Request_Bud.class);
-            startActivity(Sched);
-            finish();
+            vk.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(!(snapshot.child("Faculty").child(fAuth.getUid()).child("group_id").getValue().toString()).equals("NA") )
+                    {
+                        Intent Sched = new Intent(Home_Page.this,Approve_Request_Bud.class);
+                        startActivity(Sched);
+                        finish();
+                    }
+                    else
+                        Toast.makeText(Home_Page.this, "You are not allowed !", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
 
         }
         else if(id==R.id.nav_reviewdet){
-            Intent Sched = new Intent(Home_Page.this,Review_Details.class);
-            startActivity(Sched);
-            finish();
+            vk.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(!(snapshot.child("Faculty").child(fAuth.getUid()).child("group_id").getValue().toString()).equals("NA") )
+                    {
+                        Intent Sched = new Intent(Home_Page.this,Review_Details.class);
+                        startActivity(Sched);
+                        finish();
+                    }
+                    else
+                        Toast.makeText(Home_Page.this, "You are not allowed !", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
 
         }
         else if(id==R.id.nav_resDetails){
-            Intent Sched = new Intent(Home_Page.this,View_Approved.class);
-            startActivity(Sched);
-            finish();
+            vk.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(!(snapshot.child("Faculty").child(fAuth.getUid()).child("group_id").getValue().toString()).equals("NA") )
+                    {
+                        Intent Sched = new Intent(Home_Page.this,View_Approved.class);
+                        startActivity(Sched);
+                        finish();
+                    }
+                    else
+                        Toast.makeText(Home_Page.this, "You are not allowed !", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
 
         }
         else if(id==R.id.nav_budDetails){
-            Intent Sched = new Intent(Home_Page.this,View_Approved_2.class);
-            startActivity(Sched);
-            finish();
+            vk.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(!(snapshot.child("Faculty").child(fAuth.getUid()).child("group_id").getValue().toString()).equals("NA") )
+                    {
+                        Intent Sched = new Intent(Home_Page.this,View_Approved_2.class);
+                        startActivity(Sched);
+                        finish();
+                    }
+                    else
+                        Toast.makeText(Home_Page.this, "You are not allowed !", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
 
         }
         else if(id==R.id.nav_selPanel){
@@ -216,9 +327,20 @@ public class Home_Page extends AppCompatActivity
             });
 
         }
+        else if(id==R.id.nav_FinalEval) {
+            Intent Sched = new Intent(Home_Page.this, Final_Eval.class);
+            startActivity(Sched);
+            finish();
+        }
+        else if(id==R.id.nav_Final_Review_Details) {
+            Intent Sched = new Intent(Home_Page.this, Final_Review_Details.class);
+            startActivity(Sched);
+            finish();
+        }
 
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
+            DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

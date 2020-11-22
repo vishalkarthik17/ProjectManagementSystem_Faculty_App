@@ -67,6 +67,13 @@ public class Group_Select extends AppCompatActivity {
                         keylist.add(ds.getKey());
                         adp.notifyDataSetChanged();
                     }
+
+                }
+                if(keylist.size()==0)
+                {
+                    Intent veedu=new Intent(Group_Select.this,Home_Page.class);
+                    startActivity(veedu);
+                    finish();
                 }
             }
 
@@ -149,5 +156,10 @@ public class Group_Select extends AppCompatActivity {
 
         //Intent homego=new Intent(Group_Select.this,Home_Page.class);
         //startActivity(homego);
+    }
+    @Override
+    public void onBackPressed() {
+        Intent ToHome=new Intent(Group_Select.this,Home_Page.class);
+        startActivity(ToHome);
     }
 }

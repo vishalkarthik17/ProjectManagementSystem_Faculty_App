@@ -126,4 +126,10 @@ public class Select_Groups_Panel extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent ToHome=new Intent(Select_Groups_Panel.this,Home_Page.class);
+        startActivity(ToHome);
+    }
 }

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Final_Eval">
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/backBtn"
+        android:layout_centerHorizontal="true"
+        android:text="Enter Mark (Only if You are Panel Head) : "
+        android:textStyle="bold"
+        android:id="@+id/label_1"
+
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="300dp"
+        android:layout_below="@id/label_1"
+        android:layout_marginTop="10dp"
+        android:id="@+id/finMarkEnter"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/finMarkEnter"
+        android:layout_centerHorizontal="true"
+        android:text="Enter Remarks : "
+        android:textStyle="bold"
+        android:id="@+id/label_2"
+
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@id/label_2"
+        android:layout_marginTop="10dp"
+        android:id="@+id/finRemarkEnter"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finRemarkEnter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/label_3"
+        android:text="Select Group to Evaluate : "
+        android:textStyle="bold"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="**Select From the list Below**"
+        android:id="@+id/grpDisp"
+        />
+
+    <Button
+        android:id="@+id/toHomeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grpDisp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="proceed"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/toHomeBtn"
+        android:text="Re-Select"
+        android:layout_below="@+id/grpDisp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/reselect"
+
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toHomeBtn"
+        android:id="@+id/PanelGrouplist"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        >
+    </ListView>
+
+
+
+</RelativeLayout>

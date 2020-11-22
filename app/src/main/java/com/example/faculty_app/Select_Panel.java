@@ -1,5 +1,6 @@
 package com.example.faculty_app;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -116,4 +117,10 @@ public class Select_Panel extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+        Intent ToHome=new Intent(Select_Panel.this,Home_Page.class);
+        startActivity(ToHome);
+    }
+
 }

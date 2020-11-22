@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Final_Review_Details">
+
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/backBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Final Review"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/pageHeader"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date :"
+        android:id="@+id/date_label"
+        android:layout_below="@+id/pageHeader"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pageHeader"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/date_label"
+        android:text="NA"
+        android:textSize="16sp"
+        android:layout_marginLeft="10sp"
+        android:id="@+id/finDate"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instructions :"
+        android:id="@+id/ins_label"
+        android:layout_below="@+id/date_label"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finDate"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ins_label"
+        android:text="NA"
+        android:textSize="16sp"
+        android:layout_marginLeft="10sp"
+        android:id="@+id/FinIns"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remarks By the Panel Member :"
+        android:id="@+id/Rem_label"
+        android:layout_below="@+id/ins_label"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Rem_label"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="NA"
+        android:id="@+id/rem1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rem1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="NA"
+        android:id="@+id/rem2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rem2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="NA"
+        android:id="@+id/rem3"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rem3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Final Mark:"
+        android:id="@+id/finMark_Label"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/finMark_Label"
+        android:layout_marginTop="10dp"
+        android:text="NA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:id="@+id/FinalMarks"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/FinalMarks"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="**Select From the list Below**"
+        android:id="@+id/grpDisp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grpDisp"
+        android:text="Reselect Group"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/reselectGrp"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reselectGrp"
+        android:id="@+id/PanelGrouplist"
+        android:layout_marginTop="10dp"
+        >
+    </ListView>
+
+</RelativeLayout>

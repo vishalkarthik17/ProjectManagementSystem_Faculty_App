@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Select_Groups_Panel"></activity>
+        <activity android:name=".Final_Review_Details"></activity>
+        <activity android:name=".Final_Eval" />
+        <activity android:name=".Select_Groups_Panel" />
         <activity android:name=".Select_Panel" />
         <activity android:name=".Approve_Request_Bud" />
         <activity android:name=".View_Approved_2" />

@@ -52,12 +52,24 @@
                 android:id="@+id/nav_selGroup"
                 android:icon="@drawable/ic_group_black_24dp"
                 android:title="Select Groups" />
+
+
+
+        </menu>
+
+    </item>
+    <item android:title="Final Reivew">
+
+        <menu>
+          
             <item
                 android:id="@+id/nav_FinalEval"
-                android:icon="@drawable/ic_school_black_24dp"
+                android:icon="@drawable/ic_contact_mail_black_24dp"
                 android:title="Final Review Evaluation" />
-
-
+            <item
+                android:id="@+id/nav_Final_Review_Details"
+                android:icon="@drawable/ic_school_black_24dp"
+                android:title="Final Review Details" />
         </menu>
 
     </item>
