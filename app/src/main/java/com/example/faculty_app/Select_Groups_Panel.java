@@ -97,7 +97,7 @@ public class Select_Groups_Panel extends AppCompatActivity {
                             String ppp=snapshot.child("Faculty").child(mAuth.getUid()).child("panel_id").getValue().toString();
                             String ggg=sal.get(0);
                             String kkk=ppp+ggg;
-                            abc.child("Groups").child(ggg).child("panelAssign").setValue(ppp);
+                            abc.child("Groups").child(ggg).child("panelAssign").setValue("A");
                             abc.child("Panel_Group").child(kkk).child("panel_id").setValue(ppp);
                             abc.child("Panel_Group").child(kkk).child("group_id").setValue(ggg);
                             Intent homego=new Intent(Select_Groups_Panel.this,Home_Page.class);
