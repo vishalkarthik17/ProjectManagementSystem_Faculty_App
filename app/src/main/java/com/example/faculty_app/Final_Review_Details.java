@@ -133,4 +133,9 @@ public class Final_Review_Details extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onBackPressed() {
+        Intent ToHome=new Intent(Final_Review_Details.this,Home_Page.class);
+        startActivity(ToHome);
+    }
 }

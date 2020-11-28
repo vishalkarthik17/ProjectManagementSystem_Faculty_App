@@ -76,7 +76,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Remarks By the Panel Member :"
+        android:text="Remarks By the Panel Members :"
         android:id="@+id/Rem_label"
         android:layout_below="@+id/ins_label"
         android:layout_marginTop="10dp"

@@ -175,6 +175,23 @@
         android:textStyle="bold"
         android:layout_marginRight="10dp"
         android:id="@+id/home_subarea_label"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© CSE-D Group - 2"
+        android:layout_below="@+id/group_details_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:id="@+id/copyR"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Creators  : Ananth , KJ , Sudarshan , Vishal"
+        android:layout_below="@id/copyR"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
 
 
 </RelativeLayout>

@@ -3,6 +3,7 @@ package com.example.faculty_app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -25,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class Final_Eval extends AppCompatActivity {
-    private Button proceed, reselec;
+    private Button proceed, reselec,bb;
     private ListView lv;
     private TextView one ;
     private EditText mm , rr;
@@ -100,15 +101,12 @@ public class Final_Eval extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(sal.size()==1){
-                    Toast.makeText(Final_Eval.this, "size1", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(Final_Eval.this, "size1", Toast.LENGTH_SHORT).show();
                     abc.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             String pid=snapshot.child("Faculty").child(mAuth.getUid()).child("panel_id").getValue().toString();
-                            Log.e("PID :",pid);
-                            Log.e("UID :",mAuth.getUid());
                             if((snapshot.child("Panel").child(pid).child("panel_head").getValue().toString()).equals(mAuth.getUid()) ){
-                                Toast.makeText(Final_Eval.this, "Head Ley", Toast.LENGTH_SHORT).show();
                                 String RevKey=sal.get(0)+"Final";
                                 abc.child("Review").child(RevKey).child("finalMark").setValue(mm.getText().toString());
                                 abc.child("Review").child(RevKey).child("remarkHead").setValue(rr.getText().toString());
@@ -121,6 +119,8 @@ public class Final_Eval extends AppCompatActivity {
                                 String RevKey=sal.get(0)+"Final";
                                 abc.child("Review").child(RevKey).child("remarkMember2").setValue(rr.getText().toString());
                             }
+                            Intent ToHome=new Intent(Final_Eval.this,Home_Page.class);
+                            startActivity(ToHome);
                         }
 
                         @Override
@@ -135,6 +135,20 @@ public class Final_Eval extends AppCompatActivity {
 
             }
         });
+        bb=findViewById(R.id.backBtn);
+        bb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ToHome=new Intent(Final_Eval.this,Home_Page.class);
+                startActivity(ToHome);
+            }
+        });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent ToHome=new Intent(Final_Eval.this,Home_Page.class);
+        startActivity(ToHome);
     }
 }

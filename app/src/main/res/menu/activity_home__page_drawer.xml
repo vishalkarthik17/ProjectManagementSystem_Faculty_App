@@ -39,6 +39,12 @@
             android:id="@+id/nav_budDetails"
             android:icon="@drawable/ic_list_black_24dp"
             android:title="Budget Details" />
+        <item
+            android:id="@+id/SignOut"
+            android:icon="@drawable/ic_keyboard_backspace_black_24dp"
+            android:title="Log out"
+            />
+
 
     </group>
 

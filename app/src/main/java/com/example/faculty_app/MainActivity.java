@@ -101,11 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-                          /*Intent loginToHome=new Intent(MainActivity.this,Home_Page.class);
-                          startActivity(loginToHome);
-                          finish();*/
-
                         }
                         else
                         {

@@ -337,6 +337,12 @@ public class Home_Page extends AppCompatActivity
             startActivity(Sched);
             finish();
         }
+        else if (id == R.id.SignOut) {
+            fAuth.signOut();
+            Intent ToViewApp=new Intent(Home_Page.this,MainActivity.class);
+            startActivity(ToViewApp);
+
+        }
 
 
 
